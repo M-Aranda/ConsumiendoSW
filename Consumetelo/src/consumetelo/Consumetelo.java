@@ -16,6 +16,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.glassfish.jersey.client.JerseyClient;
+import org.glassfish.jersey.client.JerseyClientBuilder;
 
 /**
  *
@@ -27,6 +28,8 @@ public class Consumetelo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        /*
+        Esto funciona pero, retorna un XML de TODO
         try {
             HttpClient client;
             client= HttpClientBuilder.create().build();
@@ -40,19 +43,24 @@ public class Consumetelo {
         } catch (IOException ex) {
             Logger.getLogger(Consumetelo.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        //Jersey me tira error
-        /*
-        NewJerseyClient nj= new NewJerseyClient();
-        Persona p= nj.find_JSON(Persona.class,"1");
-        System.out.println(p.getNombre());*/
+         */
+
+        //Esto funciona pero solo si se usa find_XML, en cuyo caso muestra un String a partri de un XML
+        //Sin embargo, al usar find_JSON me tira error 500
+        //at org.glassfish.jersey.client.JerseyInvocation.convertToException(JerseyInvocation.java:929)
+      //  try {
+            NewJerseyClient nj = new NewJerseyClient();
+            Persona p = nj.find_XML(Persona.class, "1");
+            System.out.println(p);
+/*
+        } catch (Exception e) {
+            System.out.println("Hubo un error");
+        }
+            */
+
+            
+
+
     }
-    
+
 }

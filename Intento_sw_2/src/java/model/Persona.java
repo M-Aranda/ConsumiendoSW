@@ -86,7 +86,7 @@ public class Persona implements Serializable {
 
     @Override
     public String toString() {
-        return "model.Persona[ id=" + id + " ]";
+        return "model.Persona[ id=" + id + " nombre="+nombre +"]";
     }
     
 }

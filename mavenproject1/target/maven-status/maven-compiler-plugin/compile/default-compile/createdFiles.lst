@@ -1,0 +1,4 @@
+model\Usuario.class
+model\UsuarioRepository.class
+model\UsuarioController.class
+com\mycompany\mavenproject1\Aplicacion.class

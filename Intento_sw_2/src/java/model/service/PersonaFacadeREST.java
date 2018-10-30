@@ -55,7 +55,7 @@ public class PersonaFacadeREST extends AbstractFacade<Persona> {
         super.remove(super.find(id));
     }
 
-    @GET
+    @GET    
     @Path("{id}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Persona find(@PathParam("id") Integer id) {

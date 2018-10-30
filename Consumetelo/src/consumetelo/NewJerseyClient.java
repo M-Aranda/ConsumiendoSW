@@ -8,7 +8,8 @@ package consumetelo;
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.WebTarget;
-import model.Persona;
+import org.eclipse.persistence.exceptions.ConversionException;
+
 
 /**
  * Jersey REST client generated for REST resource:PersonaFacadeREST
